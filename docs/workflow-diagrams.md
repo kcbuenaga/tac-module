@@ -285,4 +285,183 @@ flowchart TD
 
 ---
 
-_Last updated: 2026-01-25_
+## Literature Review Builder (Patricia)
+
+```mermaid
+flowchart TD
+    Start([Receive sources from Source Validation]) --> Init[Step 01: Init]
+    Init --> CheckExisting{Existing session?}
+    CheckExisting -->|Yes| Continue[Step 01b: Continue]
+    CheckExisting -->|No| HandoffLoad[Step 02: Handoff Load<br/>Load 10-15 selected sources]
+    Continue --> ResumeStep[Resume from last step]
+
+    HandoffLoad --> ExportChoice[Step 03: Export Choice]
+    ExportChoice --> ExportDecision{Export format}
+    ExportDecision -->|S - Selected Only| ExportSelected[Generate source-list.md/docx<br/>10-15 selected sources]
+    ExportDecision -->|A - All Sources| ExportAll[Generate source-list.md/docx<br/>All found + selected at top]
+
+    ExportSelected --> LitReviewDecision[Step 04: Lit Review Decision]
+    ExportAll --> LitReviewDecision
+
+    LitReviewDecision --> ContinueLitReview{Continue to<br/>lit review?}
+    ContinueLitReview -->|N - No| SkipToCompletion[Skip to Step 10:<br/>Completion]
+    ContinueLitReview -->|Y - Yes| ThematicOrg[Step 05: Thematic Organization<br/>Collaborative theme discovery]
+
+    ThematicOrg -->|Brainstorming integration| Synthesis[Step 06: Lit Review Synthesis<br/>Generate lightweight draft]
+    Synthesis -->|Sub-agents: Parallel theme synthesis<br/>Advanced Elicitation: Quality gates| ReviewSat[Step 07: Review Satisfaction]
+
+    ReviewSat --> SatisfactionCheck{Student decision}
+    SatisfactionCheck -->|S - Satisfied| SidecarUpdate[Step 08: Sidecar Update]
+    SatisfactionCheck -->|V - Return to Source Validation| BackToSourceVal[Exit to Source Validation<br/>Need different sources]
+    SatisfactionCheck -->|C - Invoke Carla| InvokeCarla[Exit to Carla<br/>Topic scope changed]
+    SatisfactionCheck -->|R - Regenerate| RegenerateThemes[Loop back to Step 05<br/>Try different themes]
+
+    RegenerateThemes --> ThematicOrg
+
+    SidecarUpdate --> Polish[Step 09: Polish<br/>Optimize lit review flow]
+    Polish --> Completion[Step 10: Completion]
+    SkipToCompletion --> Completion
+
+    Completion --> Outputs[Outputs Generated:<br/>✅ source-list.md/docx<br/>✅ literature-review.md/docx]
+```
+
+**Key Features:**
+- **Dual Format Output:** Both MD (for state tracking) + DOCX (for students) via Pandoc
+- **ABNT Citations:** Default citation format for Brazilian students
+- **Two Paths:**
+  - MANDATORY: Source list export (selected only OR all sources)
+  - OPTIONAL: Full literature review synthesis
+- **Collaborative Facilitation:** Patricia works WITH student to discover themes
+- **Loop-back Capability:** Can return to Source Validation or invoke Carla
+- **Sub-agents:** Parallel synthesis of thematic sections in Step 06
+- **Tools Integration:**
+  - Brainstorming (Step 05 - theme generation)
+  - Advanced Elicitation (Step 06 - quality gates)
+
+---
+
+## Complete TAC Flow (All Three Workflows)
+
+```mermaid
+flowchart LR
+    subgraph "Phase 1: Topic Discovery"
+        Carla[Dr. Carla<br/>Topic Discovery]
+    end
+
+    subgraph "Phase 2: Source Validation"
+        Patricia1[Patricia<br/>Source Validation<br/>5 parallel searches]
+    end
+
+    subgraph "Phase 3: Literature Review"
+        Patricia2[Patricia<br/>Literature Review Builder<br/>Thematic organization]
+    end
+
+    subgraph "Phase 4: Writing"
+        Joao[João<br/>Writing Guide<br/>Coming soon]
+    end
+
+    Student([Brazilian MBA Student]) --> Carla
+    Carla -->|Validated topic +<br/>research question| Patricia1
+    Patricia1 -->|10-15 selected<br/>sources| Patricia2
+    Patricia2 -->|Source list +<br/>Lit review framework| Joao
+
+    Patricia1 -.->|Topic scope change| Carla
+    Patricia2 -.->|Need different sources| Patricia1
+    Patricia2 -.->|Topic scope change| Carla
+
+    style Carla fill:#e1f5ff
+    style Patricia1 fill:#fff4e1
+    style Patricia2 fill:#fff4e1
+    style Joao fill:#f0ffe1
+```
+
+**Complete Integration:**
+- **Carla (Topic Discovery)** → Validated topic + research question
+- **Patricia (Source Validation)** → 10-15 selected sources with dual scoring
+- **Patricia (Literature Review Builder)** → Source list + Thematic lit review framework
+- **João (Writing Guide)** → _(Coming soon)_ Writing support and thesis structure
+
+**Loop-back Points:**
+1. Source Validation → Topic Discovery (if topic scope needs change)
+2. Literature Review → Source Validation (if need different sources)
+3. Literature Review → Topic Discovery (if topic scope changed during review)
+
+---
+
+## Literature Review Builder - Detailed Step Flow
+
+```mermaid
+flowchart TD
+    subgraph "Phase 1: Initialization"
+        S01[Step 01: Init<br/>Check continuation]
+        S01b[Step 01b: Continue<br/>Resume session]
+        S02[Step 02: Handoff Load<br/>Load selected sources<br/>+ Patricia sidecar access]
+    end
+
+    subgraph "Phase 2: Source List Export - MANDATORY"
+        S03[Step 03: Export Choice<br/>S=Selected Only<br/>A=All Sources]
+        Output1[📄 source-list.md/docx<br/>ABNT format]
+    end
+
+    subgraph "Phase 3: Lit Review Decision"
+        S04[Step 04: Lit Review Decision<br/>Y=Continue<br/>N=Complete]
+    end
+
+    subgraph "Phase 4: Optional Lit Review"
+        S05[Step 05: Thematic Org<br/>🎨 Brainstorming<br/>Collaborative theme discovery]
+        S06[Step 06: Synthesis<br/>🤖 Sub-agents<br/>🔍 Advanced Elicitation<br/>Parallel theme synthesis]
+        Output2[📄 literature-review.md/docx<br/>Lightweight draft]
+    end
+
+    subgraph "Phase 5: Review & Loop-back"
+        S07[Step 07: Satisfaction<br/>S=Satisfied<br/>V=Source Validation<br/>C=Carla<br/>R=Regenerate]
+    end
+
+    subgraph "Phase 6: Completion"
+        S08[Step 08: Sidecar Update<br/>Write to Patricia memory]
+        S09[Step 09: Polish<br/>Optimize flow]
+        S10[Step 10: Completion<br/>Workflow complete]
+    end
+
+    S01 -->|Existing?| S01b
+    S01 -->|New?| S02
+    S01b --> S02
+    S02 --> S03
+    S03 --> Output1
+    Output1 --> S04
+    S04 -->|Y| S05
+    S04 -->|N| S10
+    S05 --> S06
+    S06 --> Output2
+    Output2 --> S07
+    S07 -->|S| S08
+    S07 -->|R| S05
+    S07 -->|V| ExitSV[Exit to<br/>Source Validation]
+    S07 -->|C| ExitCarla[Exit to Carla]
+    S08 --> S09
+    S09 --> S10
+
+    style S05 fill:#ffe1f5
+    style S06 fill:#ffe1f5
+    style Output1 fill:#e1ffe1
+    style Output2 fill:#e1ffe1
+```
+
+**Step Count:** 11 steps (Create mode)
+**Estimated Duration:** Multi-session (continuable)
+**Tools Required:** Pandoc (for MD → DOCX conversion)
+
+**Output Files:**
+1. **source-list-{date}.md + .docx** (MANDATORY)
+   - Selected sources only OR all sources with selected at top
+   - ABNT citation format
+   - Title, Author, Year, Journal, Abstract, Access Link
+
+2. **literature-review-{date}.md + .docx** (OPTIONAL)
+   - Overview, Thematic Groups, Theme Synthesis
+   - Patterns & Gaps, Framework Outline
+   - Lightweight reference document for student
+
+---
+
+_Last updated: 2026-01-26_
