@@ -42,15 +42,17 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
   - Agent: Dr. Carla (+ Patricia for source validation)
   - **THE core workflow — breaks paralysis**
 
-- [ ] **literature-review-builder**
+- [x] **literature-review-builder** ✅ COMPLETE (2026-01-26)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/literature-review-builder/literature-review-builder.spec.md`
   - Agent: Patricia
+  - Status: All 11 steps built, deployed, pushed to GitHub, documented
 
-- [ ] **thesis-structure-outline**
+- [x] **thesis-structure-outline** ✅ COMPLETE (2026-01-26)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/thesis-structure-outline/thesis-structure-outline.spec.md`
   - Agent: João
+  - Status: All 10 steps built (16 files total), deployed, pushed to GitHub, documented
 
 ### Feature Workflows (Priority 2)
 
@@ -183,4 +185,4 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
 
 ---
 
-_Last updated: 2026-01-24_
+_Last updated: 2026-01-26_
