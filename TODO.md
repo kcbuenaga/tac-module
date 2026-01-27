@@ -57,10 +57,12 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
 
 ### Feature Workflows (Priority 2)
 
-- [ ] **research-question-designer**
+- [x] **research-question-designer** ✅ COMPLETE (2026-01-26)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/research-question-designer/research-question-designer.spec.md`
   - Agent: Dr. Carla
+  - Status: All 9 steps built (10 step files + 2 data files = 12 files), deployed, pushed to GitHub, documented
+  - **Fills gap between Topic Discovery draft and final research question**
 
 - [ ] **source-explainer**
   - Use: `/bmad:bmb:workflows:workflow`

@@ -2,6 +2,8 @@
 
 TAC includes 14 workflows organized into three categories: Core (essential), Feature (specialized), and Utility (support).
 
+**Currently Documented:** 4 workflows (3 Core + 1 Feature) - see individual spec files for remaining workflows.
+
 ---
 
 ## Core Workflows
@@ -160,7 +162,73 @@ These are the essential workflows that define TAC's primary value.
 
 ## Feature Workflows
 
-### 4-8. [Specialized workflows - see workflow specs for details]
+### 4. Research Question Designer
+
+**Agent:** Dr. Carla (Academic Advisor)
+**Command:** `/tac:workflows:research-question-designer` or invoke from Dr. Carla
+
+**Purpose:** Refine draft research questions from Topic Discovery into final, evaluated questions using research methodology frameworks.
+
+**When to Use:**
+- You've completed Topic Discovery and have a draft research question
+- You need to refine the draft into a clear, precise, properly scoped question
+- You want to explore alternative formulations before committing
+- You need rigorous evaluation against research criteria
+- You're uncertain if your question is researchable within thesis constraints
+
+**What It Does:**
+1. **Input Discovery:** Loads draft research question from Topic Discovery validation document
+   - Extracts topic, draft question, field, scope context
+   - Handles manual input if validation document not found
+2. **Generate Alternatives:** Creates 3-5 alternative research question formulations
+   - Collaborative preference discussion before generation
+   - Varies focus, scope, approach, context across alternatives
+   - Each alternative has title, full question, rationale, scope (IN/OUT)
+   - Uses question formulation patterns for guidance
+3. **Review & Regeneration Loop:** Student decides to accept or regenerate
+   - Unlimited regeneration attempts with preference adjustments
+   - No forced acceptance until student is satisfied
+4. **Evaluate Against Criteria:** Rigorous assessment of each alternative
+   - **Researchability:** Data access, methods, resources, timeframe
+   - **Scope:** Appropriate for MBA thesis (not too broad/narrow)
+   - **Contribution:** Novel context, theoretical advance, practical relevance
+   - Socratic questioning to guide collaborative evaluation
+   - Web-browsing access for methodology frameworks
+5. **Select Question:** Student chooses preferred alternative based on evaluation
+   - Informed decision-making with evaluation summary
+   - Advanced Elicitation for decision support if needed
+6. **Refine Question:** Collaborative refinement conversation
+   - Polish for clarity, precision, appropriate wording
+   - Incremental refinement (not complete rewrite)
+   - Preserves student's core intent
+7. **Dr. Carla's Memory Update:** Records session for cross-workflow continuity
+8. **Completion:** Summary and recommendation for Literature Review Builder
+
+**Key Features:**
+- Continuable (multi-session support for thinking time)
+- Regeneration loops (explore until satisfied)
+- Rigorous evaluation framework with 3 criteria
+- Collaborative refinement (not dictated)
+- Question formulation patterns (618 lines) - types, examples, MBA considerations
+- Research criteria framework (568 lines) - evaluation guidelines, red flags, trade-offs
+- Dr. Carla sidecar memory for personalization
+- Workflow chaining to Literature Review Builder
+- Advanced Elicitation at key decision points
+- Tri-modal support (Create + Edit + Validate modes)
+
+**Integration:**
+- **Receives:** Topic Discovery validation document (draft question + topic context)
+- **Produces:** research-question-{date}.md in {thesis_artifacts}/research-question/
+  - Draft question from Topic Discovery
+  - All alternatives explored with rationales
+  - Complete evaluation against criteria
+  - Selected question with rationale
+  - Refined final question with improvement notes
+- **Next:** Literature Review Builder (recommended) or Thesis Structure & Outline
+
+---
+
+### 5-8. [Other specialized workflows - see workflow specs for details]
 
 ---
 
