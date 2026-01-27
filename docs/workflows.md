@@ -10,24 +10,63 @@ These are the essential workflows that define TAC's primary value.
 
 ### 1. Topic Discovery & Validation
 
-**Agent:** Dr. Carla (Academic Advisor) + Patricia (for source validation)
-**Command:** `[TD]` from Dr. Carla
+**Agent:** Dr. Carla (Academic Advisor) + Patricia (Research Librarian, invoked as sub-agent)
+**Command:** `/tac:workflows:topic-discovery-validation` or invoke from Dr. Carla
 
-**Purpose:** Help MBA students pick a viable thesis topic with source validation.
+**Purpose:** Help MBA students pick a viable thesis topic with source validation - THE breakthrough workflow that breaks paralysis.
 
 **When to Use:**
 - You have no thesis topic and don't know where to start
 - You have vague ideas but need to validate they're researchable
 - You want to avoid picking a topic that has no academic support
+- You need confidence that your topic has sufficient academic sources
+- You're paralyzed by too many possibilities or fear of wrong choice
 
 **What It Does:**
-1. Explores your interests in project management through conversation
-2. Generates 3-4 potential topic angles based on what excites you
-3. Validates each angle against USP library databases
-4. Shows you actual source counts for each angle
-5. Helps you select a topic with confidence
+1. **Interests Exploration:** Dr. Carla conducts collaborative conversation about your interests
+   - What excites you in project management?
+   - What real-world problems matter to you?
+   - Brazilian context considerations (when it matters vs doesn't)
+   - Saves interests document for reference
+2. **Topic Angle Generation:** Creates 3-4 researchable topic angles from your interests
+   - Properly scoped (not too broad, not too narrow)
+   - Aligned with MBA thesis requirements
+   - Regeneration option if angles don't resonate
+   - Saves angles document with rationales
+3. **Library Source Validation:** Patricia validates each angle with actual source counts
+   - Parallel validation using sub-agent (Pattern 4 optimization)
+   - Real library database searches (or web search fallback)
+   - Source quality assessment (peer-reviewed journals prioritized)
+   - Actual source links provided (not just counts)
+4. **Topic Selection:** Collaborative decision with Dr. Carla
+   - Compare angles based on source availability
+   - Decision criteria framework provided
+   - Confidence-building through evidence
+   - Saves validation summary with selected topic
+5. **Completion & Handoff:** Ready for next workflow (Source Validation)
 
-**This is THE breakthrough workflow that breaks paralysis.**
+**THE Breakthrough Moment:**
+- You see actual source counts and links for each angle
+- You're no longer guessing if your topic is viable
+- Paralysis breaks when you have evidence-based confidence
+
+**Key Features:**
+- Continuable (multi-session support for thinking time)
+- 3 semi-structured documents produced at key decision points
+- Library integration with web search fallback
+- Parallel source validation for efficiency
+- Backward navigation for regeneration
+- Brazilian context guidance included
+- Topic scope guidance (Goldilocks principle)
+- 5 comprehensive data reference files
+
+**Integration:**
+- **Receives:** Nothing (starting point workflow)
+- **Produces:** 3 documents in {thesis_artifacts}/topic-discovery/
+  - interests-{date}.md
+  - angles-{date}.md
+  - validation-{date}.md
+- **Next:** Source Validation (Patricia) → Literature Review Builder
 
 ---
 

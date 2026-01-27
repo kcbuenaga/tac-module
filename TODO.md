@@ -36,10 +36,11 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
 
 ### Core Workflows (Priority 1)
 
-- [ ] **topic-discovery-validation**
+- [x] **topic-discovery-validation** ✅ COMPLETE (2026-01-24)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/topic-discovery-validation/topic-discovery-validation.spec.md`
   - Agent: Dr. Carla (+ Patricia for source validation)
+  - Status: All 10 steps built (20 files total), committed to GitHub, documented
   - **THE core workflow — breaks paralysis**
 
 - [x] **literature-review-builder** ✅ COMPLETE (2026-01-26)
