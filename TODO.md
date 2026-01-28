@@ -71,10 +71,11 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
   - Status: All 5 steps built, Create mode complete
   - **Critical for bilingual users**
 
-- [ ] **writing-session-guide**
+- [x] **writing-session-guide** ✅ COMPLETE (2026-01-27)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/writing-session-guide/writing-session-guide.spec.md`
   - Agent: João
+  - Status: All 7 steps built (Create mode complete), FLOW.md added
 
 - [ ] **citation-helper**
   - Use: `/bmad:bmb:workflows:workflow`
