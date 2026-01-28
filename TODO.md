@@ -64,10 +64,11 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
   - Status: All 9 steps built (10 step files + 2 data files = 12 files), deployed, pushed to GitHub, documented
   - **Fills gap between Topic Discovery draft and final research question**
 
-- [ ] **source-explainer**
+- [x] **source-explainer** ✅ COMPLETE (2026-01-27)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/source-explainer/source-explainer.spec.md`
   - Agent: Patricia
+  - Status: All 5 steps built, Create mode complete
   - **Critical for bilingual users**
 
 - [ ] **writing-session-guide**

@@ -2,7 +2,7 @@
 
 TAC includes 14 workflows organized into three categories: Core (essential), Feature (specialized), and Utility (support).
 
-**Currently Documented:** 4 workflows (3 Core + 1 Feature) - see individual spec files for remaining workflows.
+**Currently Documented:** 5 workflows (3 Core + 2 Feature) - see individual spec files for remaining workflows.
 
 ---
 
@@ -228,7 +228,68 @@ These are the essential workflows that define TAC's primary value.
 
 ---
 
-### 5-8. [Other specialized workflows - see workflow specs for details]
+### 5. Source Explainer
+
+**Agent:** Patricia (Research Librarian - Bilingual Support Specialist)
+**Command:** `/tac:workflows:source-explainer` or invoke from Patricia
+
+**Purpose:** Explain English academic sources in Brazilian Portuguese with active identification of cultural/contextual assumptions that non-native readers might miss.
+
+**When to Use:**
+- You're reading English academic papers, abstracts, or excerpts for your thesis
+- You need more than word-for-word translation - you need concept explanation
+- You encounter US/Western business practices or academic conventions that aren't obvious
+- You want to understand "what does this mean in MY context?" (Brazilian academic culture)
+- You need reference explanations saved for future thesis writing
+
+**What It Does:**
+1. **Text Input:** Student pastes English academic text (abstract, excerpt, or full paper)
+   - Simple paste-and-go interaction
+   - No prerequisites required
+2. **Analysis:** Patricia identifies key concepts and cultural gaps
+   - Academic concepts: Technical terms, theoretical frameworks, methodological approaches
+   - Cultural assumptions: US vs Brazilian practices, Western conventions, implicit references
+   - Web-browsing research for unfamiliar concepts and cultural contexts
+   - Quality gate via Advanced Elicitation to ensure completeness
+3. **Portuguese Explanation:** Generate clear explanations with Brazilian context
+   - NOT just translation - explains what concepts MEAN
+   - Provides Brazilian equivalents and examples
+   - Web-browsing for current Brazilian context and comparisons
+   - Quality check via Advanced Elicitation for clarity and accuracy
+4. **Cultural Context Notes:** Explicitly highlights invisible assumptions
+   - What the original text assumes (that might be invisible to Brazilian readers)
+   - How this differs in Brazilian academic/business context
+   - Why understanding these differences matters for comprehension
+5. **Completion:** Saves explanation document and updates Patricia's memory
+   - Document saved for future reference during thesis writing
+   - Patricia records session patterns to personalize future explanations
+
+**Key Features:**
+- Single-session workflow (quick utility - paste text and get explanation)
+- Semi-structured document output with 4 required sections
+- Active cultural gap identification (not just vocabulary translation)
+- Web-browsing for Brazilian equivalents and current examples
+- Patricia sidecar memory for cross-session learning patterns
+- Tri-modal support (Create + Edit + Validate modes)
+- Academic rigor maintained while ensuring clarity
+
+**Integration:**
+- **Receives:** Nothing (standalone utility - use anytime you encounter English sources)
+- **Produces:** explanation-{date}.md in {thesis_artifacts}/source-explanations/
+  - Original English Text
+  - Key Concepts Identified (academic + cultural assumptions)
+  - Portuguese Explanation (concept-level, not word-level)
+  - Cultural/Contextual Notes (invisible assumptions explained)
+- **Next:** Reference document available for Literature Review Builder, Thesis Writing, or any workflow
+
+**THE Critical Feature for Bilingual Users:**
+- Makes explicit what native English readers take for granted
+- Bridges US/Western academic culture to Brazilian context
+- Transforms "I don't understand this" into "Now I see what they mean"
+
+---
+
+### 6-8. [Other specialized workflows - see workflow specs for details]
 
 ---
 
