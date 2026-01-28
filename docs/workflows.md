@@ -2,7 +2,7 @@
 
 TAC includes 14 workflows organized into three categories: Core (essential), Feature (specialized), and Utility (support).
 
-**Currently Documented:** 5 workflows (3 Core + 2 Feature) - see individual spec files for remaining workflows.
+**Currently Documented:** 6 workflows (3 Core + 3 Feature) - see individual spec files for remaining workflows.
 
 ---
 
@@ -289,7 +289,72 @@ These are the essential workflows that define TAC's primary value.
 
 ---
 
-### 6-8. [Other specialized workflows - see workflow specs for details]
+### 6. Writing Session Guide
+
+**Agent:** João (Writing Coach - Teaching Assistant persona)
+**Command:** `/tac:workflows:writing-session-guide` or invoke from João
+
+**Purpose:** Structured, continuable writing sessions to overcome writer's block with contextual prompts and sounding board support.
+
+**When to Use:**
+- You're working on writing your thesis and facing writer's block
+- You need structured guidance and prompts to get started or continue
+- You want a sounding board to bounce ideas and work through challenges
+- You need help staying focused and tracking progress across multiple writing days
+- You're ready to write (after completing Thesis Structure & Outline)
+
+**What It Does:**
+1. **Load Context:** João loads your thesis outline and prior work
+   - João's Thesis Structure & Outline (if you completed that workflow) OR
+   - Student-uploaded outline (if you never used João or changed it)
+   - Optional: Topic discovery, research question, literature review (enhances prompts)
+   - João logs uploaded outlines in memory for future sessions
+2. **Select Section:** You choose which chapter/section to work on today
+   - Free navigation (not forced linearly through chapters)
+   - Any section, anytime - student controls pacing
+   - João loads specific context for that section (coaching questions, relevant concepts)
+3. **Writing Loop:** Core collaborative writing facilitation (repeats until you're ready to track)
+   - **Prompts:** João generates contextual writing prompts specific to your thesis and section
+   - **Sounding Board:** Ask questions, bounce ideas, discuss challenges (open-ended conversation)
+   - **Advanced Elicitation:** Deep Socratic questioning to clarify arguments and strengthen reasoning
+   - **Brainstorming:** Generate ideas for content, examples, or approaches
+   - **Web-Browsing:** Find current examples, references, methodologies
+   - You write in your own thesis document (not in this workflow)
+4. **Track Progress:** Log what you accomplished
+   - What you wrote about, word count estimate, how you feel
+   - João logs detailed progress to sidecar memory
+   - ADD-friendly encouragement and momentum building
+5. **Session Decision:** What next?
+   - Continue with same section (back to writing loop)
+   - Switch to different section (choose new section)
+   - End session (save progress and exit)
+
+**Key Features:**
+- Continuable (sessions span multiple days - resume from where you left off)
+- Looping + branching flow (flexible section navigation, writing loop repeats)
+- Highly collaborative (João as constant sounding board, student-driven)
+- Contextual prompts (specific to YOUR thesis topic and section, not generic advice)
+- Flexible outline input (works with João's workflow OR standalone with upload)
+- Non-document output (you write in your own editor, João tracks progress)
+- Tools available: Advanced Elicitation, Brainstorming, Web-browsing
+- Progress tracked across sessions in João's sidecar memory
+
+**Integration:**
+- **Receives:** João's Thesis Structure & Outline (optional) OR uploaded outline
+- **Can load:** Topic discovery, research question, literature review (optional - enhances context)
+- **Produces:** Progress tracking in João's sidecar: `{project-root}/_bmad/_memory/joao-sidecar/memories.md`
+- **Next:** Continue writing sessions as needed, then Defense Preparation (Lara)
+
+**THE Critical Feature for Writing:**
+- João provides structure without writing for you (Teaching Assistant, not ghostwriter)
+- Contextual prompts break through blank page paralysis
+- Sounding board support helps you think through ideas before writing
+- Progress tracking builds momentum across multiple sessions
+- ADD-friendly design: small steps, structured, celebrates progress
+
+---
+
+### 7-8. [Other specialized workflows - see workflow specs for details]
 
 ---
 
