@@ -77,10 +77,12 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
   - Agent: João
   - Status: All 7 steps built (Create mode complete), FLOW.md added
 
-- [ ] **citation-helper**
+- [x] **citation-helper** ✅ COMPLETE (2026-01-28)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/citation-helper/citation-helper.spec.md`
   - Agent: Patricia
+  - Status: All 11 steps built (6 Create + 3 Edit + 2 Validate), tri-modal complete, pushed to GitHub
+  - **ABNT/APA citation formatting with dual input methods (paste/link)**
 
 - [ ] **defense-preparation**
   - Use: `/bmad:bmb:workflows:workflow`
@@ -126,8 +128,12 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
 
 - [ ] **Academic Database Connector (Custom MCP Tool)**
   - Connect to USP library systems (JSTOR, SciELO, CAPES, Web of Science)
-  - Used by: Topic Discovery, Literature Review Builder, Source Explainer
-  - **Critical for topic validation**
+  - Used by: Topic Discovery, Literature Review Builder, Source Explainer, Citation Helper
+  - **Critical for topic validation and gated content access**
+  - **Citation Helper Enhancement:** Add library integration to fetch full-text from gated content
+    - First user has credentials for testing
+    - Implement after core workflows complete
+    - Will enhance link-based citation input for journal articles behind paywalls
 
 - [ ] **Notion Integration**
   - Export workflow integration
