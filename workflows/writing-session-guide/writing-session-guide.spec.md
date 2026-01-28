@@ -1,18 +1,19 @@
 # Workflow Specification: writing-session-guide
 
 **Module:** tac
-**Status:** Placeholder — To be created via create-workflow workflow
+**Status:** ✅ Complete — Create mode built and deployed
 **Created:** 2026-01-24
+**Completed:** 2026-01-27
 
 ---
 
 ## Workflow Overview
 
-**Goal:** Structured writing sessions to overcome blocks
+**Goal:** Structured, continuable writing sessions to overcome writer's block with contextual prompts and sounding board support
 
-**Description:** Guides student through focused writing sessions with prompts, timers, and progress tracking to overcome writer's block.
+**Description:** João guides students through writing sessions with contextual prompts specific to their thesis, sounding board support for ideas and challenges, and progress tracking across multiple days. Highly collaborative, looping+branching flow.
 
-**Workflow Type:** Feature — Specialized, non-document
+**Workflow Type:** Feature — Specialized, non-document, continuable, tri-modal
 
 ---
 
@@ -31,18 +32,24 @@ installed_path: '{project-root}/_bmad/tac/workflows/writing-session-guide'
 
 ### Mode
 
-- [x] Create-only (steps-c/)
+- [x] Tri-modal (Create + Edit + Validate)
+  - Create mode: Fully built (7 step files)
+  - Edit mode: To be built
+  - Validate mode: To be built
 
 ---
 
-## Planned Steps
+## Implemented Steps (Create Mode)
 
 | Step | Name | Goal |
 |------|------|------|
-| 1 | What to Write | Identify chapter/section to work on |
-| 2 | Writing Prompts | Provide starter prompts to overcome blank page |
-| 3 | Timed Focus | Optional timed writing session |
-| 4 | Progress Tracking | Track words/time, celebrate progress |
+| 1 | step-01-init | Initialize session, check for continuation |
+| 1b | step-01b-continue | Resume existing session from last step |
+| 2 | step-02-load-context | Load outline (João's OR uploaded) + TAC context |
+| 3 | step-03-select-section | Student selects which section to work on |
+| 4 | step-04-writing-loop | Core loop: prompts, sounding board, tools (repeats) |
+| 5 | step-05-track-progress | Log what was accomplished |
+| 6 | step-06-session-decision | Continue/switch/end branching decision |
 
 ---
 
@@ -62,11 +69,14 @@ installed_path: '{project-root}/_bmad/tac/workflows/writing-session-guide'
 
 ### Output Format
 
-- [ ] Non-document (writing happens in user's editor)
+- [x] Non-document (student writes in their own editor)
 
 ### Output Files
 
-None (progress tracked in sidecar)
+- João's sidecar memory: `{project-root}/_bmad/_memory/joao-sidecar/memories.md`
+  - Session state (currentSection, sessionStartDate, stepsCompleted)
+  - Progress tracking (sections worked on, dates, notes, guidance provided)
+  - Uploaded outlines logged
 
 ---
 
@@ -84,12 +94,31 @@ None (standalone workflow)
 
 ## Implementation Notes
 
-**Use the create-workflow workflow to build this workflow.**
+**Built via `/bmad:bmb:workflows:workflow` on 2026-01-27**
 
-Critical features:
-- Breaks tasks into small steps
-- Celebrates small wins
-- Perfect for ADD — structured but encouraging
+Key features implemented:
+- Continuable workflow (sessions span multiple days, resume from last step)
+- Looping + branching flow (writing loop repeats, flexible section navigation)
+- Highly collaborative (João as constant sounding board)
+- Contextual prompts specific to thesis topic and section (not generic)
+- Flexible outline input (João's workflow OR student upload)
+- Advanced Elicitation for deep Socratic questioning
+- Brainstorming for idea generation
+- Web-browsing for current examples and references
+- Progress tracked in João's sidecar memory across sessions
+- ADD-friendly design: small steps, structured, celebrates progress
+
+Files created:
+- workflow.md (106 lines) - Tri-modal entry point with João's role
+- FLOW.md (81 lines) - Visual flow diagram with looping+branching
+- steps-c/ (7 step files, 1300+ lines total):
+  - step-01-init.md (141 lines)
+  - step-01b-continue.md (120 lines)
+  - step-02-load-context.md (196 lines)
+  - step-03-select-section.md (156 lines)
+  - step-04-writing-loop.md (228 lines)
+  - step-05-track-progress.md (175 lines)
+  - step-06-session-decision.md (180 lines)
 
 ---
 
