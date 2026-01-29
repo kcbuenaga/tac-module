@@ -117,10 +117,12 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
   - Spec: `workflows/thesis-timeline-planner/thesis-timeline-planner.spec.md`
   - Agent: Dr. Carla
 
-- [ ] **quick-idea-capture**
+- [x] **quick-idea-capture** ✅ COMPLETE (2026-01-29)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/quick-idea-capture/quick-idea-capture.spec.md`
   - Agent: All (shared)
+  - Status: All 4 steps built, complete implementation, committed to GitHub
+  - **Ultra-fast utility - capture thoughts instantly before forgetting (< 2 min)**
 
 - [ ] **progress-dashboard**
   - Use: `/bmad:bmb:workflows:workflow`
