@@ -130,14 +130,18 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
 
 ## MCP Tools & Integrations
 
-- [ ] **Academic Database Connector (Custom MCP Tool)**
-  - Connect to USP library systems (JSTOR, SciELO, CAPES, Web of Science)
-  - Used by: Topic Discovery, Literature Review Builder, Source Explainer, Citation Helper
+- [x] **CAPES Connector MCP** ✅ COMPLETE (2026-01-29)
+  - MCP Server: `mcp-servers/capes-connector/`
+  - Status: Built, tested, configured in Claude Code
+  - Features:
+    - `capes_search`: Search CAPES Portal de Periódicos for academic papers
+    - `capes_get_fulltext`: Extract full-text from SciELO articles (260K+ chars)
+    - `capes_test_connection`: Verify and save credentials securely
+    - `capes_list_publishers`: Check supported publishers
+  - Publisher Support: SciELO (full-text extraction), more coming
+  - Authentication: Tested and working with institutional credentials
+  - Integration: Available to Patricia, Dr. Carla, and all TAC workflows
   - **Critical for topic validation and gated content access**
-  - **Citation Helper Enhancement:** Add library integration to fetch full-text from gated content
-    - First user has credentials for testing
-    - Implement after core workflows complete
-    - Will enhance link-based citation input for journal articles behind paywalls
 
 - [ ] **Notion Integration**
   - Export workflow integration
