@@ -105,11 +105,12 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
   - Spec: `workflows/export/export.spec.md`
   - Agent: All (shared)
 
-- [ ] **library-integration-setup**
+- [x] **library-integration-setup** ✅ COMPLETE (2026-01-29)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/library-integration-setup/library-integration-setup.spec.md`
-  - Agent: Patricia
-  - **Required before using library features**
+  - Agent: Patricia (and all agents needing CAPES access)
+  - Status: All 5 steps built (4 main + 1 error handler), complete implementation
+  - **One-time setup utility - enables CAPES library access for TAC workflows**
 
 - [ ] **thesis-timeline-planner**
   - Use: `/bmad:bmb:workflows:workflow`
