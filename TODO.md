@@ -93,10 +93,12 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
 
 ### Utility Workflows (Priority 3)
 
-- [ ] **workflow-status**
+- [x] **workflow-status** ✅ COMPLETE (2026-01-28)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/workflow-status/workflow-status.spec.md`
   - Agent: All (shared)
+  - Status: All 3 steps built, complete implementation, committed to GitHub
+  - **Shared utility - scans thesis progress and recommends next step**
 
 - [ ] **export**
   - Use: `/bmad:bmb:workflows:workflow`
