@@ -84,10 +84,12 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
   - Status: All 11 steps built (6 Create + 3 Edit + 2 Validate), tri-modal complete, pushed to GitHub
   - **ABNT/APA citation formatting with dual input methods (paste/link)**
 
-- [ ] **defense-preparation**
+- [x] **defense-preparation** ✅ COMPLETE (2026-01-28)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/defense-preparation/defense-preparation.spec.md`
   - Agent: Lara
+  - Status: All 20 steps built (11 Create + 4 Edit + 2 Validate + 3 data files), tri-modal complete, pushed to GitHub
+  - **Harsh-but-fair defense coaching with 5 committee sub-agents, web-browsing, and subprocess optimization**
 
 ### Utility Workflows (Priority 3)
 
