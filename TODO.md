@@ -8,25 +8,25 @@ Development roadmap for tac module.
 
 Use the agent-builder workflow (`/bmad:bmb:workflows:agent`) to build each agent from its spec file.
 
-- [ ] **Dr. Carla** (Academic Advisor)
-  - Use: `/bmad:bmb:workflows:agent`
-  - Spec: `agents/dr-carla.spec.md`
+- [x] **Dr. Carla** ✅ COMPLETE (2026-01-29)
+  - Agent: `agents/dr-carla/dr-carla.agent.yaml`
   - Commands: Topic Discovery, Research Question Designer, Thesis Timeline Planner
+  - Sidecar: dr-carla-sidecar (topic evolution tracking)
 
-- [ ] **Patricia** (Research Librarian)
-  - Use: `/bmad:bmb:workflows:agent`
-  - Spec: `agents/patricia.spec.md`
+- [x] **Patricia** ✅ COMPLETE (2026-01-29)
+  - Agent: `agents/patricia/patricia.agent.yaml`
   - Commands: Literature Review Builder, Source Explainer, Citation Helper, Library Integration Setup
+  - Sidecar: patricia-sidecar (source search history)
 
-- [ ] **João** (Writing Coach)
-  - Use: `/bmad:bmb:workflows:agent`
-  - Spec: `agents/joao.spec.md`
+- [x] **João** ✅ COMPLETE (2026-01-29)
+  - Agent: `agents/joao/joao.agent.yaml`
   - Commands: Thesis Structure & Outline, Writing Session Guide
+  - Sidecar: joao-sidecar (writing patterns and progress)
 
-- [ ] **Lara** (Defense Prep Coach)
-  - Use: `/bmad:bmb:workflows:agent`
-  - Spec: `agents/lara.spec.md`
+- [x] **Lara** ✅ COMPLETE (2026-01-29)
+  - Agent: `agents/lara/lara.agent.yaml`
   - Commands: Defense Preparation
+  - Sidecar: lara-sidecar (defense performance tracking)
 
 ---
 
