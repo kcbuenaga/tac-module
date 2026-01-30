@@ -128,10 +128,12 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
   - Status: All 4 steps built, complete implementation, committed to GitHub
   - **Ultra-fast utility - capture thoughts instantly before forgetting (< 2 min)**
 
-- [ ] **progress-dashboard**
+- [x] **progress-dashboard** ✅ COMPLETE (2026-01-29)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/progress-dashboard/progress-dashboard.spec.md`
   - Agent: All (shared)
+  - Status: All 3 steps built (gather-data, display-dashboard, motivation), committed to GitHub
+  - **Visual progress tracking with multi-dimensional metrics and motivational boost**
 
 ---
 
