@@ -20,53 +20,66 @@ Ao invés de ferramentas genéricas de IA ou fluxos de trabalho fragmentados que
 
 ## 🚀 Instalação Rápida
 
-### Pré-requisitos
+### Instalação em Um Comando (Recomendado)
 
-1. **Claude Code CLI** instalado e configurado
-2. **BMAD Framework** instalado (veja instruções abaixo)
-3. Acesso à internet para download do módulo
+**TAC instala BMAD automaticamente se necessário:**
 
-### Passo 0: Instalar BMAD Framework (Se ainda não instalado)
+```bash
+git clone https://github.com/kcbuenaga/bmad.git
+cd bmad/tac
+./install-tac.sh
+```
 
-O TAC requer o BMAD (Better Model-Augmented Development) framework. Se você ainda não tem BMAD:
+O instalador vai:
+1. ✅ Verificar se BMAD está instalado (instala automaticamente se não)
+2. ✅ Registrar o módulo TAC
+3. ✅ Verificar que tudo está funcionando
 
-**1. Clone o repositório BMAD:**
+**Tempo:** 2-3 minutos
+**Pronto!** Você pode pular para "Verificar Instalação" abaixo.
+
+---
+
+### Instalação Manual (Alternativa)
+
+Se preferir instalar manualmente ou já tiver BMAD:
+
+**1. Clone o repositório BMAD (se ainda não tiver):**
 ```bash
 git clone https://github.com/kcbuenaga/bmad.git
 cd bmad
 ```
 
-**2. Execute o instalador BMAD:**
+**2. Instale BMAD (se ainda não tiver):**
 ```bash
-# No Claude Code CLI
 /install-bmad
 ```
 
-Ou siga as instruções no repositório BMAD para instalação completa.
-
-**3. Verifique a instalação:**
+**3. Verifique BMAD:**
 ```bash
 bmad --version
 ```
 
-Se ver a versão do BMAD, está pronto para instalar TAC!
-
-### Passo 1: Instalar o Módulo TAC
-
+**4. Instale TAC:**
 ```bash
+cd tac
 bmad install tac
 ```
 
-Durante a instalação, você será solicitado a configurar:
+### Verificar Instalação
 
-- **Nome de usuário** — Seu nome
-- **Idioma de comunicação** — `portuguese` ou `english`
-- **Idioma de saída de documentos** — `portuguese` ou `english`
-- **Pasta de saída** — Local padrão para salvar trabalhos
-- **Pasta de artefatos da tese** — Onde armazenar seu trabalho de tese (padrão: `{pasta_saída}/thesis-artifacts`)
-- **Nome da instituição** — Sua universidade (padrão: "USP")
+Execute o painel de progresso para confirmar que tudo está funcionando:
 
-### Passo 2: Configurar Acesso à Biblioteca (Opcional mas Recomendado)
+```bash
+cd ~/thesis-artifacts  # ou sua pasta de tese
+/tac:progress-dashboard
+```
+
+Se funcionar, TAC está instalado corretamente! 🎉
+
+---
+
+### Configurar Acesso à Biblioteca (Opcional mas Recomendado)
 
 Se você tem acesso ao Portal de Periódicos CAPES através da sua instituição:
 
@@ -75,14 +88,6 @@ Se você tem acesso ao Portal de Periódicos CAPES através da sua instituição
 ```
 
 Siga as instruções para configurar suas credenciais CAPES. Isso permite que TAC busque artigos de acesso restrito e textos completos.
-
-### Passo 3: Verificar Instalação
-
-Execute o painel de progresso para confirmar que tudo está funcionando:
-
-```bash
-/tac:progress-dashboard
-```
 
 ---
 
@@ -250,53 +255,66 @@ Unlike generic AI tools or fragmented workflows requiring 100 browser tabs and 4
 
 ## 🚀 Quick Installation
 
-### Prerequisites
+### One-Command Installation (Recommended)
 
-1. **Claude Code CLI** installed and configured
-2. **BMAD Framework** installed (see instructions below)
-3. Internet access for module download
+**TAC automatically installs BMAD if needed:**
 
-### Step 0: Install BMAD Framework (If not already installed)
+```bash
+git clone https://github.com/kcbuenaga/bmad.git
+cd bmad/tac
+./install-tac.sh
+```
 
-TAC requires the BMAD (Better Model-Augmented Development) framework. If you don't have BMAD yet:
+The installer will:
+1. ✅ Check if BMAD is installed (automatically installs if not)
+2. ✅ Register the TAC module
+3. ✅ Verify everything is working
 
-**1. Clone the BMAD repository:**
+**Time:** 2-3 minutes
+**Done!** You can skip to "Verify Installation" below.
+
+---
+
+### Manual Installation (Alternative)
+
+If you prefer to install manually or already have BMAD:
+
+**1. Clone BMAD repository (if you don't have it):**
 ```bash
 git clone https://github.com/kcbuenaga/bmad.git
 cd bmad
 ```
 
-**2. Run the BMAD installer:**
+**2. Install BMAD (if you don't have it):**
 ```bash
-# In Claude Code CLI
 /install-bmad
 ```
 
-Or follow the instructions in the BMAD repository for complete installation.
-
-**3. Verify installation:**
+**3. Verify BMAD:**
 ```bash
 bmad --version
 ```
 
-If you see the BMAD version, you're ready to install TAC!
-
-### Step 1: Install TAC Module
-
+**4. Install TAC:**
 ```bash
+cd tac
 bmad install tac
 ```
 
-During installation, you'll be prompted to configure:
+### Verify Installation
 
-- **User name** — Your name
-- **Communication language** — `portuguese` or `english`
-- **Document output language** — `portuguese` or `english`
-- **Output folder** — Default location for saving work
-- **Thesis artifacts folder** — Where to store thesis work (default: `{output_folder}/thesis-artifacts`)
-- **Institution name** — Your university (default: "USP")
+Run the progress dashboard to confirm everything works:
 
-### Step 2: Configure Library Access (Optional but Recommended)
+```bash
+cd ~/thesis-artifacts  # or your thesis folder
+/tac:progress-dashboard
+```
+
+If it works, TAC is correctly installed! 🎉
+
+---
+
+### Configure Library Access (Optional but Recommended)
 
 If you have access to CAPES Portal through your institution:
 
@@ -305,14 +323,6 @@ If you have access to CAPES Portal through your institution:
 ```
 
 Follow instructions to configure your CAPES credentials. This allows TAC to fetch gated articles and full-texts.
-
-### Step 3: Verify Installation
-
-Run the progress dashboard to confirm everything works:
-
-```bash
-/tac:progress-dashboard
-```
 
 ---
 
