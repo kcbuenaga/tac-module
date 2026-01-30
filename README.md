@@ -23,8 +23,33 @@ Ao invés de ferramentas genéricas de IA ou fluxos de trabalho fragmentados que
 ### Pré-requisitos
 
 1. **Claude Code CLI** instalado e configurado
-2. **BMAD Framework** instalado
+2. **BMAD Framework** instalado (veja instruções abaixo)
 3. Acesso à internet para download do módulo
+
+### Passo 0: Instalar BMAD Framework (Se ainda não instalado)
+
+O TAC requer o BMAD (Better Model-Augmented Development) framework. Se você ainda não tem BMAD:
+
+**1. Clone o repositório BMAD:**
+```bash
+git clone https://github.com/kcbuenaga/bmad.git
+cd bmad
+```
+
+**2. Execute o instalador BMAD:**
+```bash
+# No Claude Code CLI
+/install-bmad
+```
+
+Ou siga as instruções no repositório BMAD para instalação completa.
+
+**3. Verifique a instalação:**
+```bash
+bmad --version
+```
+
+Se ver a versão do BMAD, está pronto para instalar TAC!
 
 ### Passo 1: Instalar o Módulo TAC
 
@@ -228,8 +253,33 @@ Unlike generic AI tools or fragmented workflows requiring 100 browser tabs and 4
 ### Prerequisites
 
 1. **Claude Code CLI** installed and configured
-2. **BMAD Framework** installed
+2. **BMAD Framework** installed (see instructions below)
 3. Internet access for module download
+
+### Step 0: Install BMAD Framework (If not already installed)
+
+TAC requires the BMAD (Better Model-Augmented Development) framework. If you don't have BMAD yet:
+
+**1. Clone the BMAD repository:**
+```bash
+git clone https://github.com/kcbuenaga/bmad.git
+cd bmad
+```
+
+**2. Run the BMAD installer:**
+```bash
+# In Claude Code CLI
+/install-bmad
+```
+
+Or follow the instructions in the BMAD repository for complete installation.
+
+**3. Verify installation:**
+```bash
+bmad --version
+```
+
+If you see the BMAD version, you're ready to install TAC!
 
 ### Step 1: Install TAC Module
 
