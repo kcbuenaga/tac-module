@@ -100,10 +100,12 @@ Use the workflow-builder workflow (`/bmad:bmb:workflows:workflow`) to build each
   - Status: All 3 steps built, complete implementation, committed to GitHub
   - **Shared utility - scans thesis progress and recommends next step**
 
-- [ ] **export**
+- [x] **export** ✅ COMPLETE (2026-01-29)
   - Use: `/bmad:bmb:workflows:workflow`
   - Spec: `workflows/export/export.spec.md`
   - Agent: All (shared)
+  - Status: All 4 steps built (init, select-file, format-selection, export-execution), committed to GitHub
+  - **Pandoc-based Word/PDF export with optional Notion MCP integration**
 
 - [x] **library-integration-setup** ✅ COMPLETE (2026-01-29)
   - Use: `/bmad:bmb:workflows:workflow`
