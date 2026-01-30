@@ -1,14 +1,221 @@
 # TAC: Thesis Advisory Companion
+## Companheiro de Desenvolvimento de Tese Acadêmica
 
-Academic thesis development from topic discovery to defense
-
-Specialized agents for MBA thesis writers - bilingual Portuguese/English support
+🇧🇷 **[Instruções em Português](#português)** | 🇺🇸 **[English Instructions](#english)**
 
 ---
 
-## Overview
+<a name="português"></a>
+# 🇧🇷 Português
 
-TAC is a **momentum engine** for MBA thesis writers. It breaks paralysis by providing structure when frozen, validates topics before committing months of work, and acts as a companion throughout the entire thesis journey — from blank page confusion to confident defense.
+## O que é TAC?
+
+TAC (Thesis Advisory Companion) é um **motor de momentum** para escritores de tese de MBA. Ele quebra a paralisia fornecendo estrutura quando você está travado, valida tópicos antes de comprometer meses de trabalho, e atua como um companheiro ao longo de toda a jornada da tese — desde a confusão da página em branco até a defesa confiante.
+
+Ao invés de ferramentas genéricas de IA ou fluxos de trabalho fragmentados que exigem 100 abas de navegador e 4 LLMs diferentes, TAC fornece uma experiência coesa e integrada em uma única janela com agentes especializados trabalhando juntos como um grupo de estudo amigável.
+
+**Usuários Alvo:** Estudantes de MBA (particularmente da USP), falantes bilíngues Português/Inglês, retornando à academia após tempo afastado, precisando de estrutura e encorajamento.
+
+---
+
+## 🚀 Instalação Rápida
+
+### Pré-requisitos
+
+1. **Claude Code CLI** instalado e configurado
+2. **BMAD Framework** instalado
+3. Acesso à internet para download do módulo
+
+### Passo 1: Instalar o Módulo TAC
+
+```bash
+bmad install tac
+```
+
+Durante a instalação, você será solicitado a configurar:
+
+- **Nome de usuário** — Seu nome
+- **Idioma de comunicação** — `portuguese` ou `english`
+- **Idioma de saída de documentos** — `portuguese` ou `english`
+- **Pasta de saída** — Local padrão para salvar trabalhos
+- **Pasta de artefatos da tese** — Onde armazenar seu trabalho de tese (padrão: `{pasta_saída}/thesis-artifacts`)
+- **Nome da instituição** — Sua universidade (padrão: "USP")
+
+### Passo 2: Configurar Acesso à Biblioteca (Opcional mas Recomendado)
+
+Se você tem acesso ao Portal de Periódicos CAPES através da sua instituição:
+
+```bash
+/tac:patricia:library-integration-setup
+```
+
+Siga as instruções para configurar suas credenciais CAPES. Isso permite que TAC busque artigos de acesso restrito e textos completos.
+
+### Passo 3: Verificar Instalação
+
+Execute o painel de progresso para confirmar que tudo está funcionando:
+
+```bash
+/tac:progress-dashboard
+```
+
+---
+
+## 📚 Início Rápido
+
+### Jornada Recomendada da Tese
+
+1. **Configurar acesso à biblioteca** → `/tac:patricia:library-integration-setup`
+2. **Descobrir seu tópico** → `/tac:dr-carla:topic-discovery` (O FLUXO DE TRABALHO ESSENCIAL)
+3. **Refinar questão de pesquisa** → `/tac:dr-carla:research-question`
+4. **Construir revisão de literatura** → `/tac:patricia:literature-review`
+5. **Estruturar sua tese** → `/tac:joao:thesis-structure`
+6. **Planejar linha do tempo** → `/tac:dr-carla:timeline`
+7. **Sessões de escrita** → `/tac:joao:writing-session`
+8. **Preparar defesa** → `/tac:lara:defense-prep`
+
+### Fluxos de Trabalho Úteis a Qualquer Momento
+
+- **Verificar progresso** → `/tac:progress-dashboard`
+- **Ver próximo passo** → `/tac:workflow-status`
+- **Capturar ideia rápida** → `/tac:quick-idea-capture`
+- **Exportar para Word/PDF** → `/tac:export`
+- **Explicar fonte em inglês** → `/tac:patricia:source-explainer`
+- **Formatar citação** → `/tac:patricia:citation-helper`
+
+---
+
+## 👥 Agentes Especializados
+
+TAC inclui 4 agentes especializados trabalhando como um grupo de estudo amigável:
+
+### 🎓 Dr. Carla — Orientadora Acadêmica
+- Descoberta e validação de tópico
+- Design de questões de pesquisa
+- Planejamento de linha do tempo da tese
+- Rastreamento de evolução do tópico (sidecar)
+
+### 📚 Patricia — Bibliotecária de Pesquisa
+- Busca e descoberta de fontes
+- Integração com biblioteca (Portal CAPES)
+- Explicador de fontes (EN → PT-BR)
+- Ajudante de citações (formato ABNT)
+- Histórico de busca de fontes (sidecar)
+
+### ✍️ João — Coach de Escrita
+- Estrutura e esboço da tese
+- Sessões de escrita guiadas
+- Superar bloqueios de escrita
+- Padrões de escrita e progresso (sidecar)
+
+### 🎯 Lara — Coach de Preparação para Defesa
+- Preparação abrangente para defesa
+- Prática de apresentação
+- 5 sub-agentes de comitê simulado (crítico rigoroso mas justo)
+- Rastreamento de desempenho de defesa (sidecar)
+
+**Todos os agentes têm memória** (sidecar) para lembrar seu progresso e padrões ao longo do tempo.
+
+---
+
+## 🔧 Fluxos de Trabalho Disponíveis
+
+### Core (4 fluxos de trabalho essenciais)
+1. **topic-discovery-validation** — Ajuda a escolher tópico viável com validação de fontes
+2. **literature-review-builder** — Buscar biblioteca, organizar fontes
+3. **thesis-structure-outline** — Criar esboço e capítulos da tese
+4. **research-question-designer** — Refinar tópico em questões de pesquisa
+
+### Feature (6 fluxos de trabalho especializados)
+5. **source-explainer** — Explicar fontes em inglês em português
+6. **writing-session-guide** — Sessões de escrita estruturadas para superar bloqueios
+7. **citation-helper** — Formatar citações no padrão brasileiro (ABNT)
+8. **defense-preparation** — Praticar defesa e apresentação
+9. **library-integration-setup** — Configurar acesso à biblioteca
+10. **thesis-timeline-planner** — Definir prazos e marcos (planejamento reverso)
+
+### Utility (4 utilitários compartilhados)
+11. **workflow-status** — Verificar progresso da tese e próximo passo
+12. **export** — Exportar trabalho para Word/PDF/Notion
+13. **quick-idea-capture** — Capturar ideias rapidamente
+14. **progress-dashboard** — Ver progresso geral com métricas visuais
+
+---
+
+## 🎯 Características Especiais
+
+- **Suporte bilíngue** — Português e Inglês perfeitamente integrados
+- **Integração CAPES** — Acesso a artigos de acesso restrito através do Portal de Periódicos CAPES
+- **Memória persistente** — Agentes lembram seu progresso através de sidecars
+- **Planejamento reverso** — Trabalhar de trás para frente do prazo de defesa para marcos semanais
+- **Combate à procrastinação** — Transforma prazos distantes em ações semanais
+- **Explicação de fontes** — Explicar artigos acadêmicos em inglês em português
+- **Formato ABNT** — Citações formatadas no padrão brasileiro
+- **Prática de defesa** — 5 membros de comitê simulado com feedback rigoroso
+- **Rastreamento de progresso visual** — Veja seu progresso com métricas e barras de progresso
+
+---
+
+## 📖 Documentação
+
+Para guias detalhados de usuário e documentação, consulte a pasta **[docs/](docs/)**:
+- [Começando](docs/getting-started.md)
+- [Referência de Agentes](docs/agents.md)
+- [Referência de Fluxos de Trabalho](docs/workflows.md)
+- [Exemplos](docs/examples.md)
+
+---
+
+## 🆘 Solução de Problemas
+
+### Problema: "Módulo TAC não encontrado"
+**Solução:** Execute `bmad install tac` novamente para reinstalar
+
+### Problema: "Não é possível acessar o Portal CAPES"
+**Solução:**
+1. Verifique se você tem credenciais institucionais da USP
+2. Execute `/tac:patricia:library-integration-setup` novamente
+3. Teste a conexão durante a configuração
+
+### Problema: "Pandoc não encontrado" ao exportar
+**Solução:** Instale Pandoc:
+- Windows: `choco install pandoc` ou baixe de pandoc.org
+- Mac: `brew install pandoc`
+- Linux: `sudo apt-get install pandoc`
+
+### Problema: "Pasta thesis_artifacts não encontrada"
+**Solução:** A pasta é criada automaticamente na primeira execução. Se estiver faltando, execute qualquer fluxo de trabalho TAC e será criada.
+
+---
+
+## 🤝 Suporte
+
+Para problemas, perguntas ou feedback:
+- Abra uma issue no repositório GitHub
+- Consulte a documentação em docs/
+- Entre em contato com o autor do módulo
+
+---
+
+## 📝 Status de Desenvolvimento
+
+✅ **COMPLETO** — Pronto para uso!
+
+- ✅ 4 agentes especializados (Dr. Carla, Patricia, João, Lara)
+- ✅ 14 fluxos de trabalho (4 core + 6 feature + 4 utility)
+- ✅ Integração com Portal CAPES via MCP
+- ✅ Suporte bilíngue (PT-BR / EN)
+- ✅ Sistema de memória com sidecars
+- ✅ Exportar para Word/PDF/Notion
+
+---
+
+<a name="english"></a>
+# 🇺🇸 English
+
+## What is TAC?
+
+TAC (Thesis Advisory Companion) is a **momentum engine** for MBA thesis writers. It breaks paralysis by providing structure when frozen, validates topics before committing months of work, and acts as a companion throughout the entire thesis journey — from blank page confusion to confident defense.
 
 Unlike generic AI tools or fragmented workflows requiring 100 browser tabs and 4 different LLMs, TAC provides a cohesive, integrated one-window experience with specialized agents working together as a friendly study group.
 
@@ -16,125 +223,145 @@ Unlike generic AI tools or fragmented workflows requiring 100 browser tabs and 4
 
 ---
 
-## Installation
+## 🚀 Quick Installation
+
+### Prerequisites
+
+1. **Claude Code CLI** installed and configured
+2. **BMAD Framework** installed
+3. Internet access for module download
+
+### Step 1: Install TAC Module
 
 ```bash
 bmad install tac
 ```
 
-You'll be prompted to configure:
-- Thesis artifacts storage location
-- Institution name (defaults to USP)
+During installation, you'll be prompted to configure:
 
-Plus core config (user name, communication language, output language, etc.)
+- **User name** — Your name
+- **Communication language** — `portuguese` or `english`
+- **Document output language** — `portuguese` or `english`
+- **Output folder** — Default location for saving work
+- **Thesis artifacts folder** — Where to store thesis work (default: `{output_folder}/thesis-artifacts`)
+- **Institution name** — Your university (default: "USP")
+
+### Step 2: Configure Library Access (Optional but Recommended)
+
+If you have access to CAPES Portal through your institution:
+
+```bash
+/tac:patricia:library-integration-setup
+```
+
+Follow instructions to configure your CAPES credentials. This allows TAC to fetch gated articles and full-texts.
+
+### Step 3: Verify Installation
+
+Run the progress dashboard to confirm everything works:
+
+```bash
+/tac:progress-dashboard
+```
 
 ---
 
-## Quick Start
+## 📚 Quick Start
 
-1. **Set up library access** — Run Library Integration Setup with Patricia
-2. **Find your topic** — Use Topic Discovery & Validation with Dr. Carla (THE breakthrough workflow)
-3. **Organize sources** — Build your literature review with Patricia
-4. **Structure your thesis** — Create your outline with João
-5. **Write and prepare** — Use writing sessions and defense prep as you progress
+### Recommended Thesis Journey
 
-**For detailed documentation, see [docs/](docs/).**
+1. **Set up library access** → `/tac:patricia:library-integration-setup`
+2. **Discover your topic** → `/tac:dr-carla:topic-discovery` (THE BREAKTHROUGH WORKFLOW)
+3. **Refine research question** → `/tac:dr-carla:research-question`
+4. **Build literature review** → `/tac:patricia:literature-review`
+5. **Structure your thesis** → `/tac:joao:thesis-structure`
+6. **Plan timeline** → `/tac:dr-carla:timeline`
+7. **Writing sessions** → `/tac:joao:writing-session`
+8. **Prepare defense** → `/tac:lara:defense-prep`
+
+### Useful Workflows Anytime
+
+- **Check progress** → `/tac:progress-dashboard`
+- **See next step** → `/tac:workflow-status`
+- **Capture quick idea** → `/tac:quick-idea-capture`
+- **Export to Word/PDF** → `/tac:export`
+- **Explain English source** → `/tac:patricia:source-explainer`
+- **Format citation** → `/tac:patricia:citation-helper`
 
 ---
 
-## Components
-
-### Agents
+## 👥 Specialized Agents
 
 TAC includes 4 specialized agents working as a friendly study group:
 
-- **Dr. Carla** 🎓 — Academic Advisor (Topic discovery, research questions, timeline planning)
-- **Patricia** 📚 — Research Librarian (Source discovery, citations, library integration)
-- **João** ✍️ — Writing Coach (Thesis structure, writing sessions, overcoming blocks)
-- **Lara** 🎯 — Defense Prep Coach (Defense preparation, presentation practice, performance tracking)
+### 🎓 Dr. Carla — Academic Advisor
+- Topic discovery and validation
+- Research question design
+- Thesis timeline planning
+- Topic evolution tracking (sidecar)
 
-All agents have memory (hasSidecar: true) to remember your progress and patterns.
+### 📚 Patricia — Research Librarian
+- Source search and discovery
+- Library integration (CAPES Portal)
+- Source explainer (EN → PT-BR)
+- Citation helper (ABNT format)
+- Source search history (sidecar)
 
-### Workflows
+### ✍️ João — Writing Coach
+- Thesis structure and outline
+- Guided writing sessions
+- Overcome writing blocks
+- Writing patterns and progress (sidecar)
 
-**Core (3):**
-1. Topic Discovery & Validation — Help pick viable topic with source validation
-2. Literature Review Builder — Search library, organize sources
-3. Thesis Structure & Outline — Create thesis outline and chapters
+### 🎯 Lara — Defense Prep Coach
+- Comprehensive defense preparation
+- Presentation practice
+- 5 simulated committee sub-agents (harsh but fair critic)
+- Defense performance tracking (sidecar)
 
-**Feature (5):**
-4. Research Question Designer — Refine topic into research questions
-5. Source Explainer (EN → BR-PT) — Explain English sources in Portuguese
-6. Writing Session Guide — Structured writing sessions to overcome blocks
-7. Citation Helper - ABNT Only — Format citations in Brazilian standard
-8. Defense Preparation — Practice defense and presentation
-
-**Utility (6):**
-9. Workflow Status — Check thesis progress (shared)
-10. Export to Notion/Docs — Export your work (shared)
-11. Library Integration Setup — Configure library access
-12. Thesis Timeline Planner — Set deadlines and milestones
-13. Quick Idea Capture — Capture ideas quickly (shared)
-14. Progress Dashboard — View overall progress (shared)
+**All agents have memory** (sidecar) to remember your progress and patterns over time.
 
 ---
 
-## Configuration
+## 🔧 Available Workflows
 
-The module supports these configuration options (set during installation):
+### Core (4 essential workflows)
+1. **topic-discovery-validation** — Help pick viable topic with source validation
+2. **literature-review-builder** — Search library, organize sources
+3. **thesis-structure-outline** — Create thesis outline and chapters
+4. **research-question-designer** — Refine topic into research questions
 
-**Core Config (from BMAD):**
-- `user_name` — Your name
-- `communication_language` — english or portuguese
-- `document_output_language` — english or portuguese
-- `output_folder` — Default output location
+### Feature (6 specialized workflows)
+5. **source-explainer** — Explain English sources in Portuguese
+6. **writing-session-guide** — Structured writing sessions to overcome blocks
+7. **citation-helper** — Format citations in Brazilian standard (ABNT)
+8. **defense-preparation** — Practice defense and presentation
+9. **library-integration-setup** — Configure library access
+10. **thesis-timeline-planner** — Set deadlines and milestones (backward planning)
 
-**TAC-Specific:**
-- `thesis_artifacts` — Where to store thesis work (defaults to `{output_folder}/thesis-artifacts`)
-- `institution_name` — Your university (defaults to "USP")
-
----
-
-## Module Structure
-
-```
-tac/
-├── module.yaml
-├── config.yaml
-├── README.md
-├── TODO.md
-├── docs/
-│   ├── getting-started.md
-│   ├── agents.md
-│   ├── workflows.md
-│   └── examples.md
-├── agents/
-│   ├── dr-carla.spec.md
-│   ├── patricia.spec.md
-│   ├── joao.spec.md
-│   └── lara.spec.md
-├── workflows/
-│   ├── topic-discovery-validation/
-│   ├── literature-review-builder/
-│   ├── thesis-structure-outline/
-│   ├── research-question-designer/
-│   ├── source-explainer/
-│   ├── writing-session-guide/
-│   ├── citation-helper/
-│   ├── defense-preparation/
-│   ├── workflow-status/
-│   ├── export/
-│   ├── library-integration-setup/
-│   ├── thesis-timeline-planner/
-│   ├── quick-idea-capture/
-│   └── progress-dashboard/
-└── _module-installer/
-    └── installer.js
-```
+### Utility (4 shared utilities)
+11. **workflow-status** — Check thesis progress and next step
+12. **export** — Export work to Word/PDF/Notion
+13. **quick-idea-capture** — Capture ideas quickly
+14. **progress-dashboard** — View overall progress with visual metrics
 
 ---
 
-## Documentation
+## 🎯 Special Features
+
+- **Bilingual support** — Portuguese and English seamlessly integrated
+- **CAPES integration** — Access gated articles through CAPES Portal
+- **Persistent memory** — Agents remember your progress through sidecars
+- **Backward planning** — Work backwards from defense deadline to weekly milestones
+- **Anti-procrastination** — Transform distant deadlines into weekly actions
+- **Source explanation** — Explain English academic papers in Portuguese
+- **ABNT formatting** — Citations formatted in Brazilian standard
+- **Defense practice** — 5 simulated committee members with rigorous feedback
+- **Visual progress tracking** — See your progress with metrics and progress bars
+
+---
+
+## 📖 Documentation
 
 For detailed user guides and documentation, see the **[docs/](docs/)** folder:
 - [Getting Started](docs/getting-started.md)
@@ -144,23 +371,59 @@ For detailed user guides and documentation, see the **[docs/](docs/)** folder:
 
 ---
 
-## Development Status
+## 🆘 Troubleshooting
 
-This module is currently in development. The following components are planned:
+### Issue: "TAC module not found"
+**Solution:** Run `bmad install tac` again to reinstall
 
-- [ ] Agents: 4 agents (specs created)
-- [ ] Workflows: 14 workflows (specs created)
+### Issue: "Cannot access CAPES Portal"
+**Solution:**
+1. Verify you have institutional USP credentials
+2. Run `/tac:patricia:library-integration-setup` again
+3. Test connection during setup
 
-See TODO.md for detailed status and build instructions.
+### Issue: "Pandoc not found" when exporting
+**Solution:** Install Pandoc:
+- Windows: `choco install pandoc` or download from pandoc.org
+- Mac: `brew install pandoc`
+- Linux: `sudo apt-get install pandoc`
+
+### Issue: "thesis_artifacts folder not found"
+**Solution:** Folder is created automatically on first run. If missing, run any TAC workflow and it will be created.
 
 ---
 
-## Author
+## 🤝 Support
 
-Created via BMAD Module workflow on 2026-01-24
+For issues, questions, or feedback:
+- Open an issue on the GitHub repository
+- Consult documentation in docs/
+- Contact module author
 
 ---
 
-## License
+## 📝 Development Status
+
+✅ **COMPLETE** — Ready to use!
+
+- ✅ 4 specialized agents (Dr. Carla, Patricia, João, Lara)
+- ✅ 14 workflows (4 core + 6 feature + 4 utility)
+- ✅ CAPES Portal integration via MCP
+- ✅ Bilingual support (PT-BR / EN)
+- ✅ Memory system with sidecars
+- ✅ Export to Word/PDF/Notion
+
+---
+
+## 📄 License
 
 Part of the BMAD framework.
+
+---
+
+## 👨‍💻 Author
+
+Created via BMAD Module workflow on 2026-01-24
+Completed: 2026-01-29
+
+**For students, by developers who understand the thesis struggle.** 🎓
